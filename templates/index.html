@@ -1,0 +1,20 @@
+<select name="colour" method="GET" action="/">
+  <option value="{{colours[0]}}" selected>{{colours[0]}}</option>
+  {% for colour in colours[1:] %}
+    <option value="{{colour}}">{{colour}}</option>
+  {% endfor %}
+</select>
+
+<form action="/" method="POST">
+    <label for="username">Materials Project ID</label>
+    <!-- The 'name' attribute is what Flask looks for -->
+    <input type="text" id="id" name="user_input">
+    <button type="submit">Submit</button>
+</form>
+
+<script src="https://unpkg.com/@strudel/embed@latest"></script>
+<strudel-repl>
+  <!--
+// waiting for user input
+-->
+</strudel-repl>
