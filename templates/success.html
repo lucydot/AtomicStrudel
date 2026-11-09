@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="header">
+        <h1>Singing Materials</h1>
+        <h4><a href="https://github.com/nu-cem/singing-materials-app/">About</a></h4>
+    </div>
+</br>
+<form method="POST">
+	{{ form.hidden_tag() }}
+	{{ form.mp_id.label }} {{ form.mp_id(id="my-field-id")}}
+	{{ form.submit() }}
+</form>
+    
+</div>
+
+
+<script src="https://unpkg.com/@strudel/embed@latest"></script>
+<strudel-repl>
+  <!--
+{{ strudel_string }}
+-->
+</strudel-repl>

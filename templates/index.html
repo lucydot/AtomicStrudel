@@ -1,16 +1,16 @@
-<select name="colour" method="GET" action="/">
-  <option value="{{colours[0]}}" selected>{{colours[0]}}</option>
-  {% for colour in colours[1:] %}
-    <option value="{{colour}}">{{colour}}</option>
-  {% endfor %}
-</select>
-
-<form action="/" method="POST">
-    <label for="username">Materials Project ID</label>
-    <!-- The 'name' attribute is what Flask looks for -->
-    <input type="text" id="id" name="user_input">
-    <button type="submit">Submit</button>
+<div class="container">
+    <div class="header">
+        <h1>Singing Materials</h1>
+        <h4><a href="https://github.com/nu-cem/singing-materials-app/">About</a></h4>
+    </div>
+</br>
+<form method="POST">
+	{{ form.hidden_tag() }}
+	{{ form.mp_id.label }} {{ form.mp_id(id="my-field-id")}}
+	{{ form.submit() }}
 </form>
+    
+</div>
 
 <script src="https://unpkg.com/@strudel/embed@latest"></script>
 <strudel-repl>
